@@ -1,13 +1,14 @@
 // 'use client';
 import Image from 'next/image';
 // import React, { useState, useEffect } from 'react';
+export const fetchCache = 'force-no-store';
 
 async function getData() {
   const result = await fetch(process.env.API_URL, {
     next: {
       // revalidate: 20,
       cache: 'no-store',
-      
+
     },
   });
   if (!result.ok) {
