@@ -5,7 +5,7 @@ import Image from 'next/image';
 async function getData() {
   const result = await fetch(process.env.API_URL, {
     next: {
-      // revalidate: 60,
+      revalidate: 20,
     },
   });
   if (!result.ok) {
@@ -16,6 +16,7 @@ async function getData() {
 
 export default async function Home() {
   const data = await getData();
+  console.log(data)
   // const [state, setState] = useState('');
 
   // useEffect(() => {
@@ -30,6 +31,17 @@ export default async function Home() {
   return (
     <div className=''>
       <img width={250} height={250} src={data.message} alt='dog' />
+{/* 
+      {
+        data.map((el, idx) => {
+          return (
+            <>
+            <p>{el.title}</p>
+            <img src={el.imageUrl} alt="logo" />
+            </>
+          )
+        })
+      } */}
     </div>
   );
 }

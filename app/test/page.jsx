@@ -1,9 +1,18 @@
-import React from 'react'
+// async function getData() {
+//   const response = await fetch(process.env.API_URL)
+//   console.log(response.json())
+//   return response.json()
+// }
 
-const Test = () => {
+'use client'
+export default function Test() {
+  console.log(123123)
+  // const post = await getData()
   return (
-    <div>Test</div>
-  )
+    <>
+      <div>test</div>
+      <button onClick={() => window.history.back()}>Back</button>
+    </>
+  );
 }
 
-export default Test
