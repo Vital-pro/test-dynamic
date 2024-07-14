@@ -5,7 +5,7 @@ import Image from 'next/image';
 async function getData() {
   const result = await fetch(process.env.API_URL, {
     next: {
-      revalidate: 20,
+      // revalidate: 20,
     },
   });
   if (!result.ok) {
