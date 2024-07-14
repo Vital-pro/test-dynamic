@@ -6,6 +6,8 @@ async function getData() {
   const result = await fetch(process.env.API_URL, {
     next: {
       // revalidate: 20,
+      cache: 'no-store',
+      
     },
   });
   if (!result.ok) {
