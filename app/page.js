@@ -16,7 +16,7 @@ export default async function Home() {
   const data = await getData();
   return (
     <div className="">
-      <img src={data.message} alt="gog" />
+      <img width={250} height={250} src={data.message} alt="gog" />
     </div>
   );
 }
