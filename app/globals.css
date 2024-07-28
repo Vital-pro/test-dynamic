@@ -118,10 +118,12 @@ body {
 }
 
 .header {
-  background: no-repeat url('/images/background.jpeg');
+  background: no-repeat url('/images/background1.jpg');
   background-color: #508cbc;
   background-size: cover;
   background-position: 50% 68%;
+  /* border-image: fill 0 linear-gradient(190deg, #0007, #0007); */
+
 
   /* min-height: 70vh; */
   min-height: calc((1vw + 1vh) * 22);
